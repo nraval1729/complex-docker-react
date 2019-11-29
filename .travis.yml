@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t nraval1729/complex-docker-react-test -f ./client/Dockerfile.dev .
+  - docker build -t nraval1729/complex-docker-react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true nraval1729/complex-docker-react-test npm run test
